@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <div id="scores">
+        <!-- Scores will appear here -->
+    </div>
+
+    <script>
+        // Simulated score data
+        const scores = [
+            { name: "Student 1", score: 5 },
+            { name: "Student 2", score: 3 },
+            // Add more student data
+        ];
+
+        const scoresDiv = document.getElementById("scores");
+        scores.forEach(entry => {
+            const scoreElem = document.createElement("p");
+            scoreElem.textContent = `${entry.name}: ${entry.score}`;
+            scoresDiv.appendChild(scoreElem);
+        });
+    </script>
+</body>
+</html>
